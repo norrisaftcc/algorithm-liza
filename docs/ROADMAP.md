@@ -17,7 +17,9 @@ templates are in place; the imported personas are versioned under `agents/`.
 ## M1 — LIZA talks to a local model
 
 The smallest thing that is recognisably an agent: config, an OpenAI-compatible
-client, one tool protocol, and a transcript.
+client, one tool protocol, a transcript, and the stub inference server that
+lets all of the above be tested without a model
+([ADR-0005](adr/0005-development-environment.md)).
 
 **Done when:** `liza --provider lmstudio "read hello.py and tell me what it
 does"` completes a full request → tool call → tool result → answer cycle

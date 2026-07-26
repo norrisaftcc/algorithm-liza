@@ -38,10 +38,13 @@ against*, not as a codebase to inherit. LIZA's agent loop must be small enough
 for a student to read in an afternoon, because being readable is part of what
 the project is for.
 
-**Python 3.11+, managed by `uv`. No agent framework.** Dependencies are
+**Python 3.10+, managed by `uv`. No agent framework.** Dependencies are
 `httpx`, `pydantic`, `pytest`, and `ruff`. No LangChain, no LlamaIndex, no
 CrewAI. Framework churn is a plausible cause of at least one prior failure, and
-the entire agent loop is under 300 lines without one.
+the entire agent loop is under 300 lines without one. The 3.10 floor is set by
+[ADR-0005](0005-development-environment.md): nothing here needs 3.11, and
+matching the version the development sandbox can execute means the tests we run
+are the tests that run.
 
 **Talk to an OpenAI-compatible `/v1/chat/completions` endpoint over a
 configurable base URL.** Named provider presets for LM Studio
