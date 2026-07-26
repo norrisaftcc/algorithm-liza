@@ -1,6 +1,6 @@
 # ADR-0003: Adopt SHODANN growth metrics — on LIZA's output, not on our commits
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-07-26
 - **Deciders:** @norrisaftcc
 

@@ -34,6 +34,7 @@ revises — unaided. That is milestone M2. Everything after it is measurement.
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | The issue → branch → PR loop, and why spikes merge even when the code is discarded |
 | [`docs/adr/`](docs/adr/) | Architecture decisions. [0002](docs/adr/0002-liza-v0-architecture.md) is the one to read first |
 | [`docs/backlog/`](docs/backlog/) | The seeded work items, filed as issues by `scripts/seed-issues.sh` |
+| [`docs/spikes/`](docs/spikes/) | Timeboxed experiments and their transcripts. [001](docs/spikes/001-gemma4-native-tool-calls.md) measures whether Gemma 4 emits valid native tool calls |
 | [`agents/`](agents/) | The persona and skill bank |
 
 ## Related projects

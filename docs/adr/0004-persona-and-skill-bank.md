@@ -1,6 +1,6 @@
 # ADR-0004: A persona and skill bank owned by this repository
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-07-26
 - **Deciders:** @norrisaftcc
 

@@ -1,6 +1,6 @@
 # ADR-0002: LIZA v0 architecture
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-07-26
 - **Deciders:** @norrisaftcc
 
