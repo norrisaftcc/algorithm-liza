@@ -1,0 +1,2 @@
+{"schema": "liza.fixture/1", "name": "truncated-body", "observed": false, "note": "The body stops mid-JSON, as when a server is killed mid-generation or a context limit is hit awkwardly. The client must raise something naming the provider, not a bare JSONDecodeError from deep in httpx."}
+{"raw_body": "{\"id\": \"chatcmpl-1\", \"choices\": [{\"index\": 0, \"message\": {\"role\": \"assist"}

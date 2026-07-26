@@ -1,0 +1,4 @@
+{"schema": "liza.fixture/1", "name": "unknown-tool", "observed": false, "note": "Small models reach for tools from their training data that this harness does not have. ADR-0002 denies a shell, so bash is the likeliest thing to be hallucinated. The refusal must name the tools that do exist."}
+{"assistant": {"tool_calls": [{"id": "call_1", "type": "function", "function": {"name": "bash", "arguments": "{\"command\": \"cat hello.py\"}"}}]}}
+{"assistant": {"tool_calls": [{"id": "call_2", "type": "function", "function": {"name": "read_file", "arguments": "{\"path\": \"hello.py\"}"}}]}}
+{"assistant": {"content": "It prints a greeting."}}

@@ -1,0 +1,4 @@
+{"schema": "liza.fixture/1", "name": "malformed-tool-args", "observed": false, "note": "arguments is a JSON *string* per the OpenAI shape, so a model can and does put invalid JSON in it. Unquoted value here. The harness must feed the parse error back as a tool result the model can act on, not raise."}
+{"assistant": {"tool_calls": [{"id": "call_1", "type": "function", "function": {"name": "read_file", "arguments": "{\"path\": hello.py}"}}]}}
+{"assistant": {"tool_calls": [{"id": "call_2", "type": "function", "function": {"name": "read_file", "arguments": "{\"path\": \"hello.py\"}"}}]}}
+{"assistant": {"content": "It prints a greeting."}}
