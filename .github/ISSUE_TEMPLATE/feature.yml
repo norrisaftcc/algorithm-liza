@@ -1,0 +1,31 @@
+name: Feature
+description: A capability LIZA should have
+labels: ["type:feat"]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Observable outcome
+      description: What will be true once this is built? Write it as something that can be run and checked, not as a feeling of completeness.
+      placeholder: "`liza --provider lmstudio \"...\"` completes a full tool cycle and writes a transcript to .liza/runs/"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Why this is needed
+      description: What is blocked or worse without it. Link the ADR if one constrains this.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Design notes and known traps
+      description: Anything you already know will go wrong. Small-model failure modes especially — they are cheaper to write down now than to rediscover in a transcript.
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Milestone
+      options: ["M0", "M1", "M2", "M3", "M4", "Fenced off"]
+    validations:
+      required: true

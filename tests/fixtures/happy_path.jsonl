@@ -1,0 +1,3 @@
+{"schema": "liza.fixture/1", "name": "happy-path", "observed": false, "note": "The baseline: one tool call, then an answer. Everything else is a deviation from this."}
+{"assistant": {"tool_calls": [{"id": "call_1", "type": "function", "function": {"name": "read_file", "arguments": "{\"path\": \"hello.py\"}"}}]}, "usage": {"prompt_tokens": 812, "completion_tokens": 24, "total_tokens": 836}}
+{"assistant": {"content": "hello.py defines greet(name) and prints a greeting when run directly."}, "usage": {"prompt_tokens": 901, "completion_tokens": 18, "total_tokens": 919}}

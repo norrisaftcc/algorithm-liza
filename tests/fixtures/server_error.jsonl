@@ -1,0 +1,2 @@
+{"schema": "liza.fixture/1", "name": "server-error", "observed": false, "note": "HTTP 500. On a laptop this most often means the server ran out of memory loading or running the model, which is a routine event when a model is sized close to available RAM."}
+{"http": {"status": 500, "body": "{\"error\": {\"message\": \"failed to allocate KV cache\"}}"}}

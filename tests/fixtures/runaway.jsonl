@@ -1,0 +1,2 @@
+{"schema": "liza.fixture/1", "name": "runaway", "on_exhaustion": "repeat_last", "observed": false, "note": "Never returns a content message. The only thing that ends this run is the harness's own step ceiling, which is exactly what it tests. A test against this fixture that hangs has found a real bug."}
+{"assistant": {"tool_calls": [{"id": "call_n", "type": "function", "function": {"name": "list_dir", "arguments": "{\"path\": \".\"}"}}]}}
