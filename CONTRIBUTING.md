@@ -26,6 +26,28 @@ Every change follows the same five steps.
 
 `main` is always in a state where `liza` starts and the test suite passes.
 
+## Issues and PR bodies live in the repository too
+
+Steps 1 and 4 have a wrinkle worth knowing about. Much of this project is
+authored from an environment with no GitHub credentials and no network route to
+the API, so issues are written as files under `docs/backlog/` and PR bodies as
+files under `docs/pr/`, then filed from a machine that is logged in:
+
+```bash
+./scripts/seed-issues.sh --dry-run && ./scripts/seed-issues.sh
+./scripts/open-prs.sh --dry-run   && ./scripts/open-prs.sh
+```
+
+Both scripts are idempotent — an issue whose title already exists, or a branch
+that already has an open PR, is skipped — so a partial failure is safe to
+re-run.
+
+This started as a workaround and is being kept on purpose. Issue and PR text
+that lives in the repository is reviewable in a diff, and it survives the pull
+request being squashed away. `open-prs.sh` resolves `ISSUE_<backlog-number>`
+placeholders in a PR body against the real issues, and refuses to open a PR
+whose placeholder it cannot resolve, so `Closes #N` never ships dangling.
+
 ## Branch types
 
 | Prefix | Use |
