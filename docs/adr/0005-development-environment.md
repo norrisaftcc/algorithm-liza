@@ -1,6 +1,6 @@
 # ADR-0005: Two machines — where LIZA is built and where LIZA is verified
 
-- **Status:** Proposed
+- **Status:** Accepted — amended by [ADR-0006](0006-the-mac-is-the-verification-host.md), which scopes the environment findings below to the agent sandbox rather than to the project
 - **Date:** 2026-07-26
 - **Deciders:** @norrisaftcc
 
