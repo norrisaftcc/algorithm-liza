@@ -72,7 +72,8 @@ fails for reasons unrelated to our code.
 
 ## Local setup
 
-Requires Python 3.11+ and [uv](https://docs.astral.sh/uv/).
+Requires Python 3.10+ and [uv](https://docs.astral.sh/uv/) — on macOS,
+`brew install uv` or `curl -LsSf https://astral.sh/uv/install.sh | sh`.
 
 ```bash
 uv sync
@@ -80,5 +81,11 @@ uv run pytest
 uv run ruff check
 ```
 
-Running LIZA additionally requires a local OpenAI-compatible inference server —
-LM Studio, Ollama, or llama.cpp. See `docs/ROADMAP.md` for current status.
+The test suite never calls a model. It runs against the stub inference server,
+so it works with no GPU, no weights and no network — see
+[ADR-0005](docs/adr/0005-development-environment.md).
+
+Exercising LIZA against a *real* model additionally requires a local
+OpenAI-compatible inference server — LM Studio, Ollama, or llama.cpp — and is
+therefore something only a human on a suitably equipped machine can do. See
+`docs/ROADMAP.md` for current status.
