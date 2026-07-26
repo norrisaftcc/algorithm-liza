@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Development workflow
+    url: https://github.com/norrisaftcc/algorithm-liza/blob/main/CONTRIBUTING.md
+    about: How issues, branches, PRs and spikes work on this project
+  - name: Architecture decisions
+    url: https://github.com/norrisaftcc/algorithm-liza/tree/main/docs/adr
+    about: Read these before proposing a change that constrains future work
+  - name: Roadmap
+    url: https://github.com/norrisaftcc/algorithm-liza/blob/main/docs/ROADMAP.md
+    about: Milestones, definitions of done, and what is deliberately fenced off

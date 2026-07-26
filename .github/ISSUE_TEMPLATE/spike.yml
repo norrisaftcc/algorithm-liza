@@ -1,0 +1,35 @@
+name: Spike
+description: A timeboxed experiment answering one question
+labels: ["type:spike"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A spike answers one question and merges as a written record even if the
+        code is thrown away. A negative result with a transcript is a success.
+  - type: input
+    id: question
+    attributes:
+      label: The one question
+      placeholder: Does Gemma 4 emit well-formed native tool calls through LM Studio?
+    validations:
+      required: true
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox
+      placeholder: One day
+    validations:
+      required: true
+  - type: textarea
+    id: decides
+    attributes:
+      label: What this decides
+      description: What we will do differently depending on the answer. If nothing changes either way, this spike is not worth running.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: How it will be measured
+      description: Small-model behaviour is probabilistic, so one attempt proves nothing. Say how many trials and what counts as success.

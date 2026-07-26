@@ -1,0 +1,39 @@
+name: Bug
+description: Something behaved incorrectly
+labels: ["type:fix"]
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+    validations:
+      required: true
+  - type: input
+    id: transcript
+    attributes:
+      label: Transcript path
+      description: The run under .liza/runs/ that shows it, if the failure involved a model. This is usually more useful than the description.
+      placeholder: .liza/runs/2026-07-26T14-05-11-a3f9.jsonl
+  - type: input
+    id: model
+    attributes:
+      label: Model and provider
+      placeholder: gemma-4-12b via lmstudio
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Where do you think the fault is?
+      description: A guess is fine and useful. Distinguishing harness bugs from model limits is most of the work on this project.
+      options:
+        - Harness — our code is wrong
+        - Model — it could not do the task
+        - Serialisation — it could do the task but not express the tool call
+        - Unclear
+    validations:
+      required: true
